@@ -1,0 +1,165 @@
+/* Multi-Color Palette & CSS Variables */
+:root {
+    --nav-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+    --title-gradient: linear-gradient(90deg, #2563eb 0%, #d946ef 50%, #ff007a 100%);
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    --accent-blue: #0284c7;
+    --accent-emerald: #059669;
+    --accent-coral: #f43f5e;
+}
+
+/* Global Setup */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Main Container */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.12);
+    border: 1px solid var(--border-color);
+}
+
+/* Vibrant Multi-Color Header & Navigation */
+header {
+    background: var(--nav-gradient);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 8px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #ff007a; /* Vivid coral contrast on hover */
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 0, 122, 0.4);
+}
+
+/* Multi-Tone Typography */
+h1 {
+    font-size: 2.5rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #f472b6;
+    padding-bottom: 12px;
+    margin-top: 0;
+}
+
+h2 {
+    color: var(--accent-blue);
+    font-size: 1.6rem;
+    margin-top: 32px;
+}
+
+p, li {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+hr {
+    display: none;
+}
+
+/* Bright Colored Table */
+/* Bright Colored Table (Clean White Rows) */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #38bdf8; /* Vibrant cyan header text */
+    font-weight: 700;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 1.05rem;
+    border-bottom: 2px solid #0284c7;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    background-color: #ffffff !important; /* Forces all data rows to stay solid white */
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Photo Gallery Cards with Colorful Accents */
+figure {
+    display: inline-block;
+    margin: 15px;
+    background: #ffffff;
+    padding: 14px;
+    border: 2px solid #f1f5f9;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+figure:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-coral);
+    box-shadow: 0 12px 24px -8px rgba(244, 63, 94, 0.3);
+}
+
+figure img {
+    border-radius: 10px;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-emerald); /* Fresh green for photo titles */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #64748b;
+    font-size: 0.95rem;
+}
